@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/7a424b1e01.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily: {
+                Poppins: ["Poppins", "sans-serif"],
+                Philosopher: ['Philosopher', 'sans-serif']
+              }      
+            }
+          }
+        }
+      </script>
+</head>
+<body class="min-h-screen">
+
+    <header class="pt-6 md:pt-10 mb-4 md:mb-6 px-4 ">
+        <div class="container mx-auto">
+
+            <div class="flex flex-col sm:flex-row sm:justify-between mb-4">
+            <!-- Phone Number  -->
+            
+            <div class="flex gap-2 mb-3 sm:mb-0 justify-center sm:justify-start">
+                
+                <img src="Images/Icons/Call.png" alt="">
+                <p class="text-sm font-normal text-[#19224D]">+8801976845037</p>
+            </div>
+           
+            <div class="flex justify-center">
+                <img src="Images/Facebook Instagram twitter linkedin pinterest.png" alt="">
+            </div>
+            
+            </div>
+
+            <hr class="border mt-4 ">
+
+           
+
+        </div>
+    </header>
+
+    <nav class="flex flex-col items-center sm:flex-row sm:justify-between sticky top-0 z-10 container mx-auto mb-4 bg-[#ffeeec] px-3 py-3">
+
+        <!-- logo -->
+         <div class="flex justify-between w-full sm:w-auto sm:flex sm:flex-row">
+            <div class="flex gap-3">
+                <img src="./Images/Icons/Bookshop logo.png" alt="">
+                <img src="./Images/Icons/BOOKSHOP.png" alt="" class="md:ml-2">
+            </div>
+
+            <!-- Hamburger Menu Icon (visible only on mobile) -->
+            <button class="sm:hidden text-[#19224D] text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+         </div>
+
+
+
+        <!-- Menu (hidden on mobile, shown when hamburger is clicked) -->
+        <div class="hidden sm:flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 mb-4 sm:mb-0 w-full sm:w-auto">
+            <a href="#" class="hover:text-yellow-500 font-medium text-[#F65D4E]">Home</a>
+            <a href="#" class="hover:text-yellow-500 font-medium text-[#19224D]">Magazines</a>
+            <a href="#" class="hover:text-yellow-500 font-medium text-[#19224D]">Books</a>
+            <a href="#" class="hover:text-yellow-500 font-medium text-[#19224D]">Textbooks</a>
+            <img src="Images/Group 52.png" alt="" class="hidden sm:block max-w-[21px] max-h-[9px] ml-[-53px] mt-[-5px]">
+            <a href="#" class="hover:text-yellow-500 font-medium text-[#19224D]">Product</a>
+        </div>
+
+
+         <!-- Links -->
+
+         <div class="flex gap-6 mr-1 hidden md:flex">
+
+            <img src="Images/Icons/Group 9.png" alt="">
+            <img src="Images/Icons/Group 10.png" alt="">
+            <img src="Images/Icons/Profile Circle.png" alt="">
+         </div>
+       
+    </nav>
+
+    <!-- Search Bar Section-->
+
+    <section class="bg-[#F65D4E] border-solid">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-4 md:px-0 py-3">
+            <!-- Categories -->
+            <div class="bg-[#E84535] w-full sm:max-w-[197px] px-3 py-4 flex justify-between gap-9 mb-3 sm:mb-0">
+                
+                <div class="flex gap-3">
+                    
+                    <img src="Images/Menu Candy Box (1).png" alt="" class="max-w-[17px]">
+                    
+                    <h3 class="text-white font-normal">Categories</h3>
+                    
+                </div>
+                
+                <i class="fa-solid fa-arrow-down max-w-[9px] text-white mr-3 mt-[3px]"></i>
+            </div>
+
+            <!-- Search Bar -->
+
+            <div class="flex justify-between bg-white rounded-3xl w-full sm:max-w-[368px] max-h-[31px] gap-3 p-2 items-center mb-3 sm:mb-0">
+
+                <div>
+                <input type="text" placeholder="Search Products" class="text-xs font-normal text-[#7C7C7C]">
+                </div>
+
+                <div class="flex gap-2">
+                
+                <div class="flex items-center gap-1">
+                <p class="text-[10px] font-normal text-[#7C7C7C]">All Category</p>
+                <img src="Images/Group 42.png" alt="" class="max-w-[5px] h-fit">
+                </div>
+
+
+                <button class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463Z" clip-rule="evenodd" />
+                  </svg>
+                  </button>
+                <!-- <button class="bg-[#F65D4E] rounded-full max-w-[23px] max-h-[23px] px-3 py-3 items-center shadow-lg flex">
+                    <i class="fa-solid fa-magnifying-glass max-w-[9px] text-white text-center mb-[3px] ml-[-8px]"></i>
+                </button>
+                 -->
+                </div>
+            </div>
+
+
+            <!-- Location -->
+
+            <div class="flex gap-3 justify-center">
+
+                <img src="Images/Icons/Location.png" alt="">
+
+                <p class="font-normal text-white"><u>Find a Book Store</u></p>
+            </div>
+        </div>
+
+    </section>    
+    
+    <!-- Main Container -->
+
+    <main class="">
+
+        <!-- Hero Section -->
+    
+        <section class="bg-[#FFEEEC] mb-8 md:mb-14 px-4 md:px-0">
+
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center md:py-0">
+
+
+                <!-- Text Section -->
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                  
+                    <p class="font-medium text-[#19224D] text-sm mb-2 mt-2">OUR BIGEST SALE</p>
+
+                    <div class="relative">
+                    <h1 class="font-semibold text-[#19224D] text-3xl md:text-5xl mb-4 md:mb-6 z-[2] relative">Buy 2 Get 3 Free</h1>
+                    <img src="Images/Paintstroke.svg" alt="" class="absolute -bottom-3 right-0 max-w-[62%] z-[1] ">
+                    </div>
+
+                    <p class="font-medium text-[#19224D] text-sm mb-4 md:mb-6">Limited Time Only. While Supplies Last!</p>
+
+                    <div class="flex gap-2 items-center justify-center md:justify-start">
+                    <button class="text-white rounded-2xl bg-[#F65D4E] font-normal text-xs px-5 py-3">Shop Now <i class="fa-solid fa-arrow-right text-white max-w-[6px]"></i></button>
+                    
+                    </div>
+
+
+                                        
+                </div>
+
+                <div>
+
+                    <img src="Images/1b46bb04fe9300f13566ab44c2aac089.png" alt="" class="max-w-full md:max-w-none">
+                </div>
+
+        </section>
+
+        <!-- Categories Section -->
+
+        <section class="mb-8 md:mb-14 px-4 md:px-0">
+
+            <div class="container mx-auto">
+
+                <h2 class="font-Philosopher font-extrabold text-[#19224D] text-3xl md:text-4xl mb-6 md:mb-8 text-center md:text-left">Categories</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:gap-7">
+                    <!-- First Box -->
+                     <div class="bg-[#A302FC0D] rounded-xl items-start pl-6 pr-6 py-8">
+
+                        <img src="Images/Categories/Vector.png" alt="" class="max-w-[28px] mb-6">
+                        <h3 class="font-medium text-[#19224D] text-sm mb-3 ">Arts & Photography</h3>
+                        <button class="text-[#F65D4E] font-normal text-xs">Shop Now ></button>
+
+                     </div>
+
+                     <!-- Second Box -->
+                     <div class="bg-[#F7A42A0D] rounded-xl items-start pl-6 pr-6 py-8">
+
+                        <img src="Images/Categories/Union.png" alt="" class="max-w-[29px] mb-8">
+                        <h3 class="font-medium text-[#19224D] text-sm mb-3">Food </h3>
+                        <button class="text-[#F65D4E] font-normal text-xs">Shop Now ></button>
+                    </div>
+
+                    <!-- Third Box -->
+                    <div class="bg-[#f7f1f1] rounded-xl items-start pl-6 pr-6 py-8">
+
+                        <img src="Images/Categories/Group 68.png" alt="" class="max-w-[35px] mb-6">
+                        <h3 class="font-medium text-[#19224D] text-sm mb-3 ">Romance</h3>
+                        <button class="text-[#F65D4E] font-normal text-xs">Shop Now ></button>
+
+                     </div>
+
+
+                    <!-- Fourth Box -->
+                    <div class="bg-[#ecf5f7] rounded-xl items-start pl-6 pr-6 py-8">
+
+                        <img src="Images/Categories/Group 72.png" alt="" class="max-w-[28px] mb-6">
+                        <h3 class="font-medium text-[#19224D] text-sm mb-3 ">Health</h3>
+                        <button class="text-[#F65D4E] font-normal text-xs">Shop Now ></button>
+
+                     </div>
+
+                    <!-- Fifth Box -->
+                    <div class="bg-[#f7f0ef] rounded-xl items-start pl-6 pr-6 py-8">
+
+                        <img src="Images/Categories/Vector (1).png" alt="" class="max-w-[25px] mb-6">
+                        <h3 class="font-medium text-[#19224D] text-sm mb-3 ">Biography</h3>
+                        <button class="text-[#F65D4E] font-normal text-xs text-center">Shop Now ></button>
+
+                     </div>
+
+
+
+                </div>
+                    
+
+                
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Daily Deals Section -->
+
+        <section class="mb-8 md:mb-16 px-4 md:px-0">
+
+
+            <div class="container mx-auto">
+
+                <!-- Daily Deals Text and time-->
+                 <div class="flex flex-col sm:flex-row justify-between mb-5 items-center">
+
+                    <h2 class="font-Philosopher font-bold text-[#19224D] text-3xl md:text-4xl mb-4">Daily Deals</h2>
+
+                        <!-- Time -->
+                        <div class="mb-4 sm:mb-8">
+                        
+                        <div class="flex justify-between gap-3 bg-[#F65D4E] rounded-2xl px-4 py-2">
+
+                            <img src="Images/Daily Deals/time-icon.png" alt="" class="max-w-[18px] h-fit">
+                            <p class="font-medium text-white text-xs">30 : 23: 56: 16</p>
+                        </div>
+                        
+                        </div>
+                 </div>
+
+                 <!-- Book Section -->
+                 <diV>
+
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 overflow-x-auto">
+                        
+                    <!-- <div class="flex flex-col md:flex-row justify-center items-center gap-6 overflow-x-auto"> -->
+                        <!-- First Box -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full ">
+                            <div>
+                            <img src="Images/Daily Deals/book-1.png" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Bela Purabar Age</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Arif Ajad</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Second BOX -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full ">
+                            <div>
+                            <img src="Images/Daily Deals/book-2.png" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Ruposhi Bangla</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$25.33</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Third Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full ">
+                            <div class="">
+                            <img src="Images/Daily Deals/book-3.png" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Kazuo Ishiguro</h4>
+
+                            <img src="Images/Daily Deals/5 Star.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$70.53 </h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+                        <!-- Fourth Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full ">
+                            <div class="">
+                            <img src="Images/Daily Deals/book-4.png" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">River of my Blood</h4>
+
+                            <img src="Images/Daily Deals/5 Star.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Selina Hossain</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$80.79 </h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+                        <!-- Fifth Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full ">
+                            <div class="">
+                            <img src="Images/Daily Deals/book-5.png" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Those Days</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Sunil Gangopadhyay</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$30.86</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    
+
+                    </div>
+
+                 </diV>
+
+
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Promotional Banner Section -->
+
+        <section class="mb-8 md:mb-16 px-4 md:px-0">
+
+        <!-- Main Container  -->
+        <div class="container mx-auto">
+
+            <!-- Left Side Image -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
+                    <!-- Text Section -->
+                    <div class="bg-red-500 rounded-lg overflow-hidden  flex flex-col lg:flex-row items-center h-auto md:h-[238px] max-w-full md:max-w-max">
+                        
+                        <!-- <div class="text-center md:text-left mb-6 md:mb-0"> -->
+                        <div class="text-center w-full md:w-[60%] py-6 md:py-0">
+
+                        <!-- <div class="text-center w-full md:w-[55%] py-4 md:py-0">   -->
+                        
+                            <p class="font-medium text-xs text-white mt-2">Discount up to</p>
+                            <h2 class="font-semibold text-3xl md:text-4xl text-white mb-1">20% off</h2>
+                            <p class="font-medium text-xs text-white mb-3">It all begins with a great book!</p>
+
+                            <button class="text-[#19224D] bg-[#FFFFFF] rounded-2xl font-normal text-[7px] px-3 py-1">Shop Now ></button>
+
+                        </div>
+
+                    
+
+                        <!-- Image -->
+
+                        <div class="">
+                        <img src="Images/1b46bb04fe9300f13566ab44c2aac089.png" alt="" class="w-auto h-full object-cover">
+                        </div>
+
+                    </div>
+
+            
+
+
+
+                <!-- Right Side Image -->
+
+
+                <div class="bg-gray-400 relative rounded-lg overflow-hidden h-[238px]">
+
+                    
+
+                    <div class="absolute top-14 left-10 z-10">
+
+                        <h2 class="font-semibold text-2xl md:text-3xl text-[#19224D] mb-4">Books Make<br> Great Gifts</h2>
+
+                        <p class="font-medium text-[#19224D] text-xs">Why not send the gift of a book to<br>
+                                family's & friends!</p>
+
+
+
+                    </div>
+
+
+                        
+                        <img src="Images/image.png" alt="" class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+        </section>
+
+
+
+        <!-- Trending Now Section -->
+
+
+        <section class="mb-8 md:mb-14 px-4 md:px-0">
+
+            <div class="container mx-auto">
+
+                <!-- Trending Now Text and Arrow-->
+                 <div class="flex flex-col sm:flex-row justify-between mb-5 items-center">
+
+                    <h2 class="font-Philosopher font-bold text-[#19224D] text-3xl md:text-4xl mb-4">Trending Now</h2>
+
+                        <!-- Arrow -->
+                        <div class="mb-4 sm:mb-8">
+                        
+                        <div class="flex justify-between gap-3 bg-[#F65D4E] rounded-full px-4 py-2">
+
+                            <button class="font-medium text-white text-xs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                              </svg>
+                              </button>
+
+                            <button class="font-medium text-white text-xs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                              </svg>
+                              </button>
+                        </div>
+                        
+                        </div>
+                 </div>
+
+
+                 <!-- Book Section -->
+
+                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+
+                    <!-- First Box -->
+
+                    <div class="bg-[#A302FC0D] rounded-lg items-start col-span-1 sm:col-span-2 relative h-[394px] overflow-hidden">
+
+                    <!-- <div class="bg-[#A302FC0D] rounded-lg items-start col-span-2 relative h-[394px] overflow-hidden"> -->
+
+                        <div class="absolute z-10 top-24 left-10">
+                        <h3 class="font-medium text-[#F65D4E] text-4xl md:text-5xl mb-5">30% off</h3>
+
+                        <!-- <h3 class="font-medium text-[#F65D4E] text-5xl mb-5">30% off</h3> -->
+                        <p class="font-normal text-sm text-[#19224D]">Get Questions?</p>
+                        <p class="font-medium text-lg text-[#19224D]">+8801976845037</p>
+                        </div>
+
+                        <img src="Images/Trending Now/30-off.svg" alt="" class="h-full w-full object-bottom object-cover">
+                        
+
+                     </div>
+
+                    <!-- Second Box -->
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+
+                        <img src="Images/Daily Deals/book-1.png" alt="" class="w-full h-64 object-cover">
+                        
+                    <div class="p-4">
+                        <h4 class="text-[#19224D] font-medium text-sm mb-2">Bela Purabar Age</h4>
+
+                        <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                        <p class="text-xs text-[#7C7C7C] font-normal mb-5">Arif Ajad</p>
+
+                        <div class="flex items-center text-center gap-2">
+                            <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                            <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                        </div>
+                    </div>
+                        
+                    </div>
+
+                    <!-- Third Box -->
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+
+                        <img src="Images/Trending Now/Second-Image.svg" alt="" class="w-full h-64 object-cover">
+                        
+                    <div class="p-4">
+                        <h4 class="text-[#19224D] font-medium text-sm mb-2">Sera Biggani</h4>
+
+                        <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                        <p class="text-xs text-[#7C7C7C] font-normal mb-5">Hitlar A Halim</p>
+
+                        <div class="flex items-center text-center gap-2">
+                            <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                            <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                        </div>
+                    </div>
+                        
+                    </div>
+
+                    <!-- Fourth Box -->
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+
+                        <img src="Images/Trending Now/book-3.png" alt="" class="w-full h-64 object-cover">
+                        
+                    <div class="p-4">
+                        <h4 class="text-[#19224D] font-medium text-sm mb-2">Jibon o Sristy</h4>
+
+                        <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                        <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                        <div class="flex items-center text-center gap-2">
+                            <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                            <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                        </div>
+                    </div>
+                        
+                    </div>
+
+                    <!-- Fifth Box -->
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+
+                        <img src="Images/Trending Now/Fourth-Image.svg" alt="" class="w-full h-64 object-cover">
+                        
+                    <div class="p-4">
+                        <h4 class="text-[#19224D] font-medium text-sm mb-2">Tomar Name Sonda</h4>
+
+                        <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                        <p class="text-xs text-[#7C7C7C] font-normal mb-5">Sajad Hossain</p>
+
+                        <div class="flex items-center text-center gap-2">
+                            <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                            <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                        </div>
+                    </div>
+                        
+                    </div>
+
+
+                 </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Features Book-->
+
+        <section class="mb-8 md:mb-16 px-4 md:px-0">
+
+            <div class="container mx-auto">
+
+                <!-- Header Section-->
+                <div class="flex flex-col sm:flex-row justify-between mb-5 items-center">
+
+                    <h2 class="font-Philosopher font-bold text-[#19224D] text-3xl md:text-4xl mb-4">Features Book</h2>
+
+                        <!-- Arrow -->
+                        <div class="mb-4 sm:mb-8">
+                        
+                        <div class="flex justify-between gap-3 bg-[#F65D4E] rounded-full px-4 py-2">
+
+                            <button class="font-medium text-white text-xs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                              </svg>
+                              </button>
+
+                            <button class="font-medium text-white text-xs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                              </svg>
+                              </button>
+                        </div>
+                        
+                        </div>
+                 </div>
+
+                
+                  <!-- Book Section 1 -->
+                  <div class="mb-7">
+
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 overflow-x-auto">
+                        <!-- First Box -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/1.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Bristyr Sathe Dekha</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Ibrahim Hossain</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Second BOX -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/2.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Ruposhi Bangla</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Jibonando Dash</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$25.33</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Third Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/3.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Bela Purabar Age</h4>
+
+                            <img src="Images/Daily Deals/5 Star.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Arif Ajad</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$70.53 </h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+
+                        <!-- Fourth Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/4.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Jibon o Sristy</h4>
+
+                            <img src="Images/Daily Deals/5 Star.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$80.79 </h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+
+                        <!-- Fifth Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Rectangle 26.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Bristy Bilash</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$30.86</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    
+
+                    </div>
+
+                 </div>
+
+
+                 <!-- Book Section 2 -->
+                 <div class="mb-8 md:mb-16">
+
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 overflow-x-auto">
+                        <!-- First Box -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full ">
+                            <div class="">
+                            <img src="Images/Features-Book/6.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Jodi Picoult</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Ibrahim Hossain</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$40.99</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+
+                        <!-- Second BOX -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/7.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Silent Scream</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Jibonando Dash</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$25.33</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Third Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/8.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Willow</h4>
+
+                            <img src="Images/Daily Deals/5 Star.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$70.53 </h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Fourth Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/9.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Crime and punishment</h4>
+
+                            <img src="Images/Daily Deals/5 Star.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$80.79 </h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        <div class="hidden md:block" style="border-left:1px solid #D9D9D9;height:350px"></div>
+
+                        <!-- Fifth Box -->
+
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden w-full">
+                            <div class="">
+                            <img src="Images/Features-Book/10.svg" alt="" class="h-full mx-auto object-cover">
+                            </div>
+                        <div class="p-4">
+                            <h4 class="text-[#19224D] font-medium text-sm mb-2">Amar e Dehokhani</h4>
+
+                            <img src="Images/Daily Deals/4 start.png" alt="" class="max-w-[84px] mb-2">
+
+                            <p class="text-xs text-[#7C7C7C] font-normal mb-5">Humayun Ahmed</p>
+
+                            <div class="flex items-center text-center gap-2">
+                                <h3 class="text-[#F65D4E] text-base font-normal">$30.86</h3>
+                                <p class="text-[#A7A7A7] font-normal text-[8px]"><del>$140.99</del></p>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    
+
+                    </div>
+
+                 </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Email Subscription Section -->
+
+        <section class="mb-8 md:mb-16 px-4 md:px-0">
+
+            <div class="container mx-auto">
+
+                <div class="px-4 sm:px-8 md:px-16 py-4 mb-5 bg-[#467D2E] rounded-xl overflow-hidden">
+
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                    <!-- <div class="flex justify-between items-center"> -->
+                    <!-- Text Section -->
+                    <div class="mb-6 md:mb-0 text-center md:text-left">
+                        <h1 class="mb-3 text-white font-semibold text-3xl md:text-5xl">Get 10% Off Your Order!</h1>
+
+                        <p class="text-white font-medium text-sm md:text-base mb-6 md:mb-10">Enter your email and received a 10% discount on your next order!</p>
+                        
+                            <div class="flex">
+                            <input  type="email" placeholder="Your email address" class="flex-1 px-4 py-3 rounded-l-full focus:outline-none"/>
+                            
+                            <button class="bg-red-500 text-white px-6 py-3 rounded-r-full hover:bg-red-600 transition-colors">Subscribe</button>
+                            </div>
+
+                    </div>
+
+                        <!-- Img Section -->
+                        <div class="">
+                            <img src="Images/Mask group.svg" class="w-full h-fit">
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- Latest Blog Post Section -->
+
+
+        <!-- <section class="mb-16"> -->
+        <section class="mb-8 md:mb-16 px-4 md:px-0">
+
+            <div class="container mx-auto">
+
+                <!-- Header Section-->
+                <!-- <div class="flex justify-between mb-5"> -->
+                <div class="flex flex-col sm:flex-row justify-between mb-5 items-center">
+
+                    <!-- <h2 class="font-Philosopher font-bold text-[#19224D] text-4xl mb-8">Latest Blog Post</h2> -->
+                    <h2 class="font-Philosopher font-bold text-[#19224D] text-3xl md:text-4xl mb-4">Latest Blog Post</h2>
+
+                        <!-- Arrow -->
+                        <div class="mb-4 sm:mb-8">
+                        
+                        <div class="flex justify-between gap-3 bg-[#F65D4E] rounded-full px-4 py-2">
+
+                            <button class="font-medium text-white text-xs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                              </svg>
+                              </button>
+
+                            <button class="font-medium text-white text-xs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                              </svg>
+                              </button>
+                        </div>
+                        
+                        </div>
+                 </div>
+
+
+            <!-- Main Container -->
+
+            <!-- <div class="flex justify-between items-center gap-8 ">  -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"> 
+
+
+                <!-- First Image -->
+                <div class="">
+
+                    <img src="Images/Latest-Blog-Post/1.svg" alt="" class="mb-4 w-full">
+
+                    <p class="font-normal text-[#7C7C7C] text-xs mb-2">DECEMBAR 15, 2022 / KAWSAR </p>
+                    <h4 class="text-[#19224D] font-medium text-sm">3 Attractive romantic love book</h4>
+
+                    <hr class="border mb-2 mt-5">
+
+                    <div class="flex justify-between">
+
+                        <p class="font-normal text-[#7C7C7C] text-xs">IN UNCATEGORIZED</p>
+                        <button class="font-normal text-[#F65D4E] text-xs">Read More ></button>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Second Image -->
+                <div class="">
+
+                    <img src="Images/Latest-Blog-Post/2.svg" alt="" class="mb-4 w-full">
+
+                    <p class="font-normal text-[#7C7C7C] text-xs mb-2">DECEMBAR 15, 2022 / KAWSAR </p>
+                    <h4 class="text-[#19224D] font-medium text-sm">3 Attractive romantic love book</h4>
+
+                    <hr class="border mb-2 mt-5">
+
+                    <div class="flex justify-between">
+
+                        <p class="font-normal text-[#7C7C7C] text-xs">IN UNCATEGORIZED</p>
+                        <button class="font-normal text-[#F65D4E] text-xs">Read More ></button>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Third Image -->
+                <div class="">
+
+                    <img src="Images/Latest-Blog-Post/3.svg" alt="" class="mb-4 w-full">
+
+                    <p class="font-normal text-[#7C7C7C] text-xs mb-2">DECEMBAR 15, 2022 / KAWSAR </p>
+                    <h4 class="text-[#19224D] font-medium text-sm">3 Attractive romantic love book</h4>
+
+                    <hr class="border mb-2 mt-5">
+
+                    <div class="flex justify-between">
+
+                        <p class="font-normal text-[#7C7C7C] text-xs">IN UNCATEGORIZED</p>
+                        <button class="font-normal text-[#F65D4E] text-xs">Read More ></button>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Fourth Image -->
+                <div class="">
+
+                    <img src="Images/Latest-Blog-Post/4.svg" alt="" class="mb-4 w-full">
+
+                    <p class="font-normal text-[#7C7C7C] text-xs mb-2">DECEMBAR 15, 2022 / KAWSAR </p>
+                    <h4 class="text-[#19224D] font-medium text-sm">3 Attractive romantic love book</h4>
+
+                    <hr class="border mb-2 mt-5">
+
+                    <div class="flex justify-between">
+
+                        <p class="font-normal text-[#7C7C7C] text-xs">IN UNCATEGORIZED</p>
+                        <button class="font-normal text-[#F65D4E] text-xs">Read More ></button>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+        </section>
+
+
+    <!-- Before Footer -->
+
+    <section class="">
+
+        <hr class="border solid">
+
+        <div class="container mx-auto px-4 md:px-0">
+
+            <!-- Flex Container -->
+             <div class="py-8 md:py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+                <!-- Address -->
+                <div>
+                    <h4 class="text-[#F65D4E] font-medium text-base">Address</h4>
+                    <p class="text-[#19224D] font-normal text-xs">Dhaka Chittagong highway road,<br>
+                        Dharmapur, Chouddagram,<br>
+                        Comilla 3500</p>
+                </div>
+
+                <div>
+
+                    <h4 class="mb-4 text-[#F65D4E] font-medium text-base">Important Links</h4>
+                    <ul class="space-y-2 text-[#19224D] font-normal text-xs">
+                        <li><a class="hover:text-orange-600" href="#">Cart</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Log In</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Sign Up</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Enter TrxID</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Find My Books</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Corporate Order</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4 class="mb-4 text-[#F65D4E] font-medium text-base">Support</h4>
+                    <ul class="space-y-2 text-[#19224D] font-normal text-xs">
+                        <li><a class="hover:text-orange-600" href="#">How to Visa</a></li>
+                        <li><a class="hover:text-orange-600" href="#">How to Paypal</a></li>
+                        <li><a class="hover:text-orange-600" href="#">FAQ</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Help Center</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Contact Us</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Live Chat</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4 class="mb-4 text-[#F65D4E] font-medium text-base">Support</h4>
+                    <ul class="space-y-2 text-[#19224D] font-normal text-xs">
+                        <li><a class="hover:text-orange-600" href="#">About Us</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Shipping Policy</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Return Policy</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-orange-600" href="#">Terms & Conditions</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4 class="mb-4 text-[#F65D4E] font-medium text-base">Stay Connected</h4>
+
+                    <img src="Images/Facebook Instagram twitter linkedin pinterest.svg" alt="" class="max-w-[126px] mb-6">
+
+                    <div class="flex gap-2 mb-3">
+                        <img src="Images/Group 1.svg" alt="" class=" ">
+                        <p class="text-[#19224D] font-medium text-base">Download App</p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <img src="Images/Group.svg" alt="" class="w-[80px]">
+                        <img src="Images/Google_Play_Store_badge_EN 1.svg" alt="" class="w-[80px]">
+                    </div>
+
+                </div>
+
+
+
+             </div>
+
+
+        </div>
+
+        <hr class="border solid">
+
+    </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container mx-auto px-4 md:px-0">
+
+            <!-- Flex Container -->
+            <div class="py-6 flex flex-col md:flex-row justify-between text-center items-center gap-4 md:gap-0">
+
+                <div>
+
+                    <p class="text-[#19224D] font-normal text-base">© Design by <span class="text-[#F65D4E]">Kawsar Ahmed.</span> All rights reserved.</p>
+
+                </div>
+
+
+                <div>
+
+                    <img src="Images/Payment.svg" alt="">
+
+                </div>
+
+
+
+        </div>
+
+
+    </footer>
+    
+</body>
+</html>
